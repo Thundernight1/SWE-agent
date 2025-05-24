@@ -6,12 +6,19 @@ Installation from source is the preferred way to set up SWE-agent on your machin
     ```bash
     git clone https://github.com/SWE-agent/SWE-agent.git
     ```
-2. Run
+2. Create and activate a virtual environment
+    ```bash
+    python -m venv .venv
+    source .venv/bin/activate
     ```
-    python -m pip install --upgrade pip && pip install --editable .
+    This isolates dependencies and prevents conflicts with your system Python.
+3. Run
+    ```bash
+    python -m pip install --upgrade pip
+    pip install --editable .
     ```
     at the repository root (as with any python setup, it's recommended to use [conda][] or [virtual environments][] to manage dependencies).
-3. Set up your language model of choice as explained [here](keys.md).
+4. Set up your language model of choice as explained [here](keys.md).
 
 Let's run a quick check:
 
